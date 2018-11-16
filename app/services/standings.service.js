@@ -4,7 +4,7 @@ exports.getStandings = ({
     year = new Date().getFullYear(),
     type = 'fbs'
 }) => {
-    const baseUrl = `http://cdn.espn.com/core/college-football/standings/_/season/${year}/view/${type}`;
+    const baseUrl = `http://cdn.espn.com/core/eng.1/standings/_/season/${year}/view/${type}`;
 
     const queryParams = {
         xhr: 1,
