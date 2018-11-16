@@ -112,33 +112,8 @@ describe('Scoreboard', () => {
         });
     });
 
-    it('should populate scoreboard data for the given week and year', (done) => {
-        app.scoreboard.getScoreboard({
-            year: 2015,
-            week: 5
-        }).then((data) => {
-            data.should.exist;
-            data.should.be.json;
-            data.should.not.be.empty;
-            done();
-        });
-    });
-
     it('should return a promise for scoreboard data for the current week and year', (done) => {
         app.scoreboard.getScoreboard({})
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            });
-    });
-
-    it('should return a promise for scoreboard data for the given week and year', (done) => {
-        app.scoreboard.getScoreboard({
-                year: 2015,
-                week: 5
-            })
             .then((data) => {
                 data.should.exist;
                 data.should.be.json;
@@ -158,77 +133,5 @@ describe('Standings', () => {
             data.should.not.be.empty;
             done();
         });
-    });
-
-    it('should return a promise for standings for the given year', (done) => {
-        app.standings.getStandings({
-                year: 2015
-            })
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            });
-    });
-});
-
-describe('Recruiting', () => {
-    it('should return a promise for a list of individual rankings for the given year', (done) => {
-        app.recruiting.getPlayerRankings({
-                year: 2016
-            })
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            })
-    });
-
-    it('should return a promise for a list of individual rankings for the given year and position', (done) => {
-        app.recruiting.getPlayerRankings({
-                year: 2016,
-                position: "DT"
-            })
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            })
-    });
-
-    it('should return a promise for a list of individual rankings for the given year and group', (done) => {
-        app.recruiting.getPlayerRankings({
-                year: 2016,
-                group: "JuniorCollege"
-            })
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            })
-    });
-
-    it('should return a promise for a list of school rankings for the given year', (done) => {
-        app.recruiting.getSchoolRankings(2016)
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            })
-    });
-
-    it('should return a promise for a school\'s commit list for a given year', (done) => {
-        app.recruiting.getSchoolCommits('michigan', 2016)
-            .then((data) => {
-                data.should.exist;
-                data.should.be.json;
-                data.should.not.be.empty;
-                done();
-            })
     });
 });
