@@ -5,7 +5,7 @@ exports.getRankings = ({
     week = null,
     seasontype = null
 }) => {
-    const baseUrl = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings';
+    const baseUrl = 'http://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/rankings';
 
     return rp({
             url: baseUrl,
