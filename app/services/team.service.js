@@ -3,7 +3,7 @@ const rp = require('request-promise');
 const getTeamList = ({
     groups = 80
 }) => {
-    const baseUrl = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/teams';
+    const baseUrl = 'http://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams';
     const queryParams = {
         groups,
         limit: 1000
@@ -17,7 +17,7 @@ const getTeamList = ({
 }
 
 const getTeamInfo = (id) => {
-    const baseUrl = `http://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/${id}`;
+    const baseUrl = `http://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/${id}`;
 
     return rp({
         url: baseUrl,
@@ -26,7 +26,7 @@ const getTeamInfo = (id) => {
 }
 
 const getTeamPlayers = (id) => {
-    const baseUrl = `http://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/${id}`;
+    const baseUrl = `http://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/${id}`;
     const queryParams = {
         enable: "roster"
     };
