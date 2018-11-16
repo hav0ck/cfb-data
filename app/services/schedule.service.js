@@ -6,7 +6,7 @@ const getSchedule = ({
     groups = null,
     seasontype = null
 }) => {
-    const baseUrl = 'http://cdn.espn.com/core/college-football/schedule';
+    const baseUrl = 'http://cdn.espn.com/core/eng.1/schedule';
     const queryParams = {
         dates: year,
         week,
