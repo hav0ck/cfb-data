@@ -1,7 +1,7 @@
 const rp = require('request-promise');
 
 exports.getPlayByPlay = (id) => {
-    const baseUrl = 'http://cdn.espn.com/core/college-football/playbyplay';
+    const baseUrl = 'http://cdn.espn.com/core/eng.1/playbyplay';
     const queryParams = {
         gameId: id,
         xhr: 1,
@@ -32,7 +32,7 @@ exports.getPlayByPlay = (id) => {
 };
 
 exports.getBoxScore = (id) => {
-    const baseUrl = 'http://cdn.espn.com/core/college-football/boxscore';
+    const baseUrl = 'http://cdn.espn.com/core/eng.1/boxscore';
     const queryParams = {
         gameId: id,
         xhr: 1,
@@ -58,7 +58,7 @@ exports.getBoxScore = (id) => {
 };
 
 exports.getSummary = (id) => {
-    const baseUrl = 'http://site.api.espn.com/apis/site/v2/sports/football/college-football/summary';
+    const baseUrl = 'http://site.api.espn.com/apis/site/v2/sports//soccer/eng.1/summary';
     const queryParams = {
         event: id
     };
